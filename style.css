@@ -1,0 +1,385 @@
+/* =========================
+PREMIUM PAGE LOAD ANIMATION
+========================= */
+
+body{
+    opacity:0;
+    animation:pageFadeIn 1.2s ease forwards;
+}
+
+@keyframes pageFadeIn{
+    to{
+        opacity:1;
+    }
+}
+
+/* HERO TEXT ANIMATION */
+.hero-left h1{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.3s;
+}
+
+.hero-left p{
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.6s;
+}
+
+.email-btn{
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.9s;
+}
+
+.hero-right img{
+    opacity:0;
+    transform:translateY(40px) scale(0.95);
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.hero-right img:nth-child(1){
+    animation-delay:0.5s;
+}
+
+.hero-right img:nth-child(2){
+    animation-delay:0.8s;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* =========================
+GLOBAL RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#EEF0EB;
+    color:#1a1a1a;
+    line-height:1.6;
+    padding-top:80px;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 10%;
+    gap:60px;
+}
+
+.hero-left{
+    flex:1;
+}
+
+.hero-left h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:90px;
+    font-weight:500;
+    line-height:0.9;
+    margin-bottom:20px;
+}
+
+.hero-left p{
+    font-size:18px;
+    letter-spacing:1px;
+    margin-bottom:30px;
+    color:#444;
+}
+
+.email-btn{
+    display:inline-block;
+    font-size:18px;
+    color:#1a1a1a;
+    text-decoration:underline;
+}
+
+.hero-right{
+    flex:1;
+    display:flex;
+    gap:25px;
+    justify-content:center;
+}
+
+.hero-right img{
+    width:260px;
+    height:360px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:0.4s ease;
+}
+
+.hero-right img:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+/* =========================
+ABOUT
+========================= */
+
+.about{
+    display:flex;
+    gap:60px;
+    padding:120px 10%;
+    align-items:center;
+}
+
+.about-img img{
+    width:350px;
+    height:450px;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.about-text h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    margin-bottom:15px;
+    color:#444;
+    font-size:16px;
+    max-width:500px;
+}
+
+/* =========================
+PORTFOLIO
+========================= */
+
+.portfolio{
+    padding:120px 10%;
+}
+
+.portfolio h2{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:38px;
+    margin:80px 0 40px;
+    letter-spacing:2px;
+}
+
+/* VIDEO GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+    justify-items:center;
+}
+
+.grid.small{
+    grid-template-columns:repeat(2, 1fr);
+}
+
+video{
+    width:100%;
+    max-width:320px;
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:0.4s ease;
+    cursor:pointer;
+}
+
+video:hover{
+    transform:scale(1.03);
+}
+
+/* SPLIT SECTION */
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    margin-top:80px;
+}
+
+.split h2{
+    text-align:left;
+    margin-bottom:30px;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact{
+    text-align:center;
+    padding:120px 10%;
+}
+
+.contact h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.contact-email{
+    display:block;
+    font-size:20px;
+    color:#1a1a1a;
+    margin-bottom:30px;
+    text-decoration:underline;
+}
+
+.socials a{
+    margin:0 15px;
+    color:#444;
+    text-decoration:none;
+    font-size:16px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-left h1{
+    font-size:60px;
+}
+
+.hero-right{
+    flex-direction:column;
+    align-items:center;
+}
+
+.about{
+    flex-direction:column;
+    text-align:center;
+}
+
+.split{
+    grid-template-columns:1fr;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+video{
+    max-width:100%;
+    cursor:pointer
+}
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(238,240,235,0.8);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.nav-links a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#1a1a1a;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.nav-links a:hover{
+    opacity:0.6;
+}
+
+/* =========================
+SCROLL REVEAL (PREMIUM)
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    filter:blur(4px);
+    transition:all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+}
+
+/* =========================
+FULLSCREEN VIDEO MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    position:relative;
+    width:80%;
+    max-width:800px;
+}
+
+.modal-content video{
+    width:100%;
+    height:auto;
+    border-radius:20px;
+}
+
+.close{
+    position:absolute;
+    top:-40px;
+    right:0;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+    font-family:sans-serif;
+}
